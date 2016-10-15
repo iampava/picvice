@@ -1,8 +1,8 @@
 {
   "name": "picvice",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
-  "private": true,
+  "author": "Alexandru Pavaloi",
+  "homepage": "http://www.alexpavaloi.com",
+  "private": false,
   "scripts": {
     "build": "ionic-app-scripts build",
     "watch": "ionic-app-scripts watch",

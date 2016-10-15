@@ -4,13 +4,13 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map'
 
 @Injectable()
-export class AdviceService {
+export class ChuckNorrisJokesService {
 
     constructor(private _http: Http) { }
 
     getAdvice(): Observable<any> {
         return this._http
-            .get('http://api.adviceslip.com/advice')
+            .get('https://api.chucknorris.io/jokes/random')
             .map((res: Response) => res.json());
     };
 }

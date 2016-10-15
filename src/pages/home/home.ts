@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AdviceService } from '../../services/advice-service';
+import { ChuckNorrisJokesService } from '../../services/chuck-noris-jokes-service';
 
 @Component({
   selector: 'page-home',
@@ -8,13 +8,13 @@ import { AdviceService } from '../../services/advice-service';
 })
 export class HomePage {
   advice: string;
-  constructor(public navCtrl: NavController, public adviceService: AdviceService) {
+  constructor(public navCtrl: NavController, public adviceService: ChuckNorrisJokesService) {
 
   }
   getNewAdvice() {
     this.adviceService.getAdvice().subscribe(
       response => {
-        this.advice = '"' + response.slip.advice + '"';
+        this.advice = '"' + response.value + '"';
       }, error => {
         throw new Error(error);
       }
