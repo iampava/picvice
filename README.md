@@ -8,7 +8,7 @@ This repo has 3 branches with the following purpose
 
 **progressive-web-app**: contains the [progressive web-app] (https://addyosmani.com/blog/getting-started-with-progressive-web-apps/ "Progressive Web Apps") code which uses [Service Workers] (https://developers.google.com/web/fundamentals/getting-started/primers/service-workers "Service Workers") for an offline experience.. Since Ionic 2 is a Front-End framework there's nothing stopping us from deploying it online.
 
-**gh-pages**: contains the same code as in the **progressive-web-app** branch. Why do I still have it here? So that you can access the project [online](http://pafcal.github.io/picvice "Picvice")
+**gh-pages**: contains the same functionality as in the **progressive-web-app** branch. Why do I still have it here? So that you can access the project [online](http://pafcal.github.io/picvice "Picvice")
 ## Run the project
 
 1. **npm install**
