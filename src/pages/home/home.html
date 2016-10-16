@@ -7,14 +7,14 @@
 		<p class="home-page__advice">{{advice}}</p>
 	</section>
 
-	<section class="home-page__button-wrapper" (click)="getNewAdvice()">
+	<section class="home-page__button-wrapper">
+		<button ion-button icon-left class="home-page__button" (click)="getNewAdvice()">
+      		<ion-icon name="text"></ion-icon>
+    		Gimme some advice!
+      	</button>
 		<button ion-button icon-left class="home-page__button">
-      <ion-icon name="text"></ion-icon>
-    Gimme some advice!
-      </button>
-		<button ion-button icon-left class="home-page__button">
-      <ion-icon name="camera"></ion-icon>
-     Take picture!
-      </button>
+      		<ion-icon name="camera"></ion-icon>
+     		Take picture!
+      	</button>
 	</section>
 </ion-content>
