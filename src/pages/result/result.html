@@ -1,0 +1,25 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			ChuckNorrisation!!!
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="result-page__content">
+	<canvas id="resultCanvas"></canvas>
+</ion-content>
+
+<ion-footer>
+	<button ion-button icon-left class="button button-75" (click)="getNewJoke()">
+      		<ion-icon name="text"></ion-icon>
+    		Gimme some advice!
+      	</button>
+	<a download="chuckNorisation.png" href="{{imageData}}">
+		<button ion-button icon-left class="button button-20" color="secondary">
+      		<ion-icon name="color-palette"></ion-icon>
+    		Save!
+      	</button>
+	</a>
+
+</ion-footer>

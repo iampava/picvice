@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content class="home-page__content">
 	<section class="home-page__title">
 		<h2>Picvice</h2>
 		<h6>Pictures & Chuck Norris facts like never before!</h6>
@@ -8,13 +8,15 @@
 	</section>
 
 	<section class="home-page__button-wrapper">
-		<button ion-button icon-left class="home-page__button" (click)="getNewAdvice()">
+		<button ion-button icon-left class="home-page__button" (click)="getNewJoke()">
       		<ion-icon name="text"></ion-icon>
     		Gimme some advice!
       	</button>
-		<button ion-button icon-left class="home-page__button">
+		<button ion-button icon-left class="home-page__button" (click)="getPicture()">
       		<ion-icon name="camera"></ion-icon>
      		Take picture!
       	</button>
 	</section>
+	<input type="file" accept="image/*" capture="camera" style="display: none" id="getPictureInput"/>
+	<canvas  id="myCanvas"></canvas>
 </ion-content>
