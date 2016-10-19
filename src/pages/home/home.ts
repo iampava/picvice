@@ -1,5 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Camera } from 'ionic-native';
 import { ChuckNorrisJokesService } from '../../services/chuck-noris-jokes-service';
 import { ResultPage } from '../result/result';
 
@@ -21,16 +22,14 @@ export class HomePage {
     );
   }
 
-  ngOnInit() {
-    this.elRef.nativeElement.querySelector("#getPictureInput").addEventListener('change', (event) => {
-      setTimeout(() => {
-        this.navCtrl.push(ResultPage, this.elRef.nativeElement.querySelector("#getPictureInput").files[0]);
-      }, 300);
+  getPicture() {
+    Camera.getPicture({sourceType: 1, quality: 100}).then((imageData) => {
+      let base64Image = 'data:image/jpeg;base64,' + imageData;
+      this.navCtrl.push(ResultPage, base64Image);
+    }, (err) => {
+      throw new Error("Camera error!")
     });
   }
 
-  getPicture() {
-    this.elRef.nativeElement.querySelector("#getPictureInput").click();
-  }
-
 }
+
