@@ -11,6 +11,7 @@ import { ResultPage } from '../result/result';
 export class HomePage {
   advice: string;
   constructor(public navCtrl: NavController, public jokesService: ChuckNorrisJokesService, private elRef: ElementRef) {
+    this.advice = "";
   }
   getNewJoke() {
     this.jokesService.getAdvice().subscribe(
@@ -23,9 +24,13 @@ export class HomePage {
   }
 
   getPicture() {
-    Camera.getPicture({sourceType: 1, quality: 100}).then((imageData) => {
-      let base64Image = 'data:image/jpeg;base64,' + imageData;
-      this.navCtrl.push(ResultPage, base64Image);
+    Camera.getPicture({ encodingType: Camera.EncodingType.PNG, sourceType: 1, destinationType: Camera.DestinationType.DATA_URL, quality: 1}).then((imageData) => {
+
+      let base64Image = 'data:image/png;base64,' + imageData;
+      setTimeout(() => {
+        this.navCtrl.push(ResultPage, { base64: base64Image, initialText: this.advice });
+
+      }, 1000);
     }, (err) => {
       throw new Error("Camera error!")
     });
