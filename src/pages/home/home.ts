@@ -16,7 +16,8 @@ export class HomePage {
       response => {
         this.advice = '"' + response.value + '"';
       }, error => {
-        throw new Error(error);
+        this.advice = '"' + this.jokesService.getCachedAdvice() + '"';
+        console.error(error);
       }
     );
   }
@@ -24,7 +25,7 @@ export class HomePage {
   ngOnInit() {
     this.elRef.nativeElement.querySelector("#getPictureInput").addEventListener('change', (event) => {
       setTimeout(() => {
-        this.navCtrl.push(ResultPage, {image: this.elRef.nativeElement.querySelector("#getPictureInput").files[0], initialText: this.advice});
+        this.navCtrl.push(ResultPage, { image: this.elRef.nativeElement.querySelector("#getPictureInput").files[0], initialText: this.advice });
       }, 300);
     });
   }
