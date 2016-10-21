@@ -24,7 +24,7 @@ export class HomePage {
   ngOnInit() {
     this.elRef.nativeElement.querySelector("#getPictureInput").addEventListener('change', (event) => {
       setTimeout(() => {
-        this.navCtrl.push(ResultPage, this.elRef.nativeElement.querySelector("#getPictureInput").files[0]);
+        this.navCtrl.push(ResultPage, {image: this.elRef.nativeElement.querySelector("#getPictureInput").files[0], initialText: this.advice});
       }, 300);
     });
   }

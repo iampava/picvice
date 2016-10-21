@@ -1,10 +1,10 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "Picvice",
+  "short_name": "Picvice",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
-    "src": "assets/imgs/logo.png",
+    "src": "assets/images/logo.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
