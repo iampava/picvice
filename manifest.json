@@ -3,10 +3,10 @@
   "short_name": "Ionic",
   "start_url": "index.html",
   "display": "standalone",
-  "description": "A simply readable Hacker News app.",
+  "description": "A simple ChuckNorrisation of your photos!",
   "icons": [
     {
-      "src": "assets/imgs/logo.png",
+      "src": "assets/images/logo.png",
       "sizes": "512x512",
       "type": "image/png"
     }
